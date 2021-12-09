@@ -1,0 +1,35 @@
+<button class="btn btn-success nuevo" routerLink="/create">Nuevo</button>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Categoria</th>
+        <th>Sabor</th>
+        <th>Precio</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <th>{{ producto.nombre }}</th>
+        <th>{{ producto.categoria }}</th>
+        <th>{{ producto.sabor }}</th>
+        <th>{{ producto.precio | currency }}</th>
+        <th>{{ producto.estado }}</th>
+        <th>
+          <button
+            class="btn btn-warning"
+            (click)="edit(producto)">
+            Editar
+          </button>
+          <button 
+            class="btn btn-danger"
+            (click)="delete(producto.nombre)">
+            Eliminar
+          </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>

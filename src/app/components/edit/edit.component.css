@@ -1,0 +1,16 @@
+form {
+    width: 100%;
+    margin: 0;
+}
+.row {
+    margin-bottom: 30px;
+}
+button {
+    float: right;
+}
+@media (min-width:600px) {
+    form {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
